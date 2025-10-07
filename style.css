@@ -1,0 +1,315 @@
+/* --- 1. Global & Reset Styles (Picto Theme) --- */
+:root {
+    --primary-color: #A152E8; /* Soft Purple/Violet */
+    --secondary-color: #6C757D;
+    --light-bg: #F4F4F4; /* Main background color */
+    --card-bg: white; /* Content containers */
+    --dark-text: #333333;
+    --soft-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* Soft, wide shadow */
+    --max-width: 1200px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif; /* Recommended Google Font for this look */
+    background-color: var(--light-bg);
+    color: var(--dark-text);
+    line-height: 1.6;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    color: var(--dark-text);
+}
+
+.section {
+    padding: 4rem 1rem;
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+/* --- 2. Floating Content Container Styles --- */
+/* Apply this class to sections to get the rounded, floating card look */
+.content-container {
+    background-color: var(--card-bg);
+    padding: 3rem;
+    border-radius: 20px; /* Highly rounded corners */
+    box-shadow: var(--soft-shadow); /* Soft shadow */
+    margin: 2rem auto;
+}
+
+/* --- 3. Header & Navigation (Clean & Minimal) --- */
+.header {
+    background: var(--card-bg);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.nav a {
+    margin-left: 1.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--dark-text);
+}
+
+.nav a:hover {
+    color: var(--primary-color);
+}
+
+/* --- 4. Hero Section (Replicating the Picto Style) --- */
+.hero {
+    /* Use padding instead of fixed height for better responsiveness */
+    padding: 6rem 1rem 8rem;
+    text-align: center;
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+.hero-content {
+    background: var(--card-bg);
+    padding: 3rem;
+    border-radius: 30px; /* Even rounder for the main hero */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--dark-text);
+    line-height: 1.2;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2.5rem;
+}
+
+.cta-button {
+    display: inline-block;
+    background: var(--primary-color);
+    color: white;
+    padding: 0.85rem 2.5rem;
+    border-radius: 12px; 
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.cta-button:hover {
+    background: #c399f2;
+    transform: translateY(-2px);
+}
+
+/* --- 5. About Me --- */
+.about-me {
+    padding-top: 0; /* Adjust spacing */
+}
+
+.about-content {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    background: var(--card-bg);
+    border-radius: 20px;
+    box-shadow: var(--soft-shadow);
+    padding: 3rem;
+}
+
+.profile-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 12px; /* Square/Rectangle image with rounded corners */
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+/* --- 6. Skills Section (CSS Grid) --- */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    text-align: center;
+}
+
+.skill-card {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: var(--soft-shadow);
+    transition: transform 0.2s, box-shadow 0.3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15); /* Slightly darker shadow on hover */
+}
+
+.skill-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+
+/* --- 7. Projects Section (CSS Grid) --- */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    background: var(--card-bg);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--soft-shadow);
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.project-card h3 {
+    padding: 1rem 1.5rem 0.5rem;
+    color: var(--primary-color);
+}
+
+.project-card p {
+    padding: 0 1.5rem 1rem;
+    flex-grow: 1;
+}
+
+.project-links {
+    padding: 0 1.5rem 1.5rem;
+    display: flex;
+    gap: 10px;
+}
+
+.project-link-btn {
+    /* Styles are consistent with cta-button for a clean look */
+    flex: 1;
+    text-align: center;
+    padding: 0.5rem 1rem;
+    background: var(--primary-color);
+    color: white;
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+.project-link-btn.secondary {
+    background: var(--secondary-color);
+}
+
+/* --- 8. Contact Form (Floating Container Style) --- */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2.5rem;
+    background: var(--card-bg);
+    border-radius: 20px;
+    box-shadow: var(--soft-shadow);
+}
+
+.contact-form label {
+    display: block;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--dark-text);
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.85rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #fafafa;
+    color: var(--dark-text);
+    resize: vertical;
+}
+
+.contact-form .cta-button {
+    width: 100%;
+    margin-top: 2rem;
+    border: none;
+    cursor: pointer;
+}
+
+
+/* --- 9. Footer --- */
+.footer {
+    background: var(--card-bg);
+    text-align: center;
+    padding: 2rem;
+    color: var(--dark-text);
+    border-top: 1px solid #eee;
+}
+
+.footer .social-links a {
+    margin: 0 1rem;
+    color: var(--dark-text);
+    font-weight: 500;
+}
+
+
+/* --- 10. Responsive Adjustments --- */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+    }
+
+    .nav {
+        margin-top: 1rem;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .nav a {
+        margin: 0 0.5rem;
+    }
+
+    .hero-content {
+        padding: 2rem;
+    }
+
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem;
+    }
+
+    .profile-img {
+        width: 150px;
+        height: 150px;
+    }
+}
