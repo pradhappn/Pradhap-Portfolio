@@ -1,0 +1,24 @@
+RESUME DOWNLOAD INSTRUCTIONS
+=============================
+
+Your portfolio is configured to download a resume file from:
+d:\Portfolio\assets\Pradhap_Resume.pdf
+
+TO ADD YOUR RESUME:
+-------------------
+1. Create or export your resume as a PDF file
+2. Name it "Pradhap_Resume.pdf" (or update index.html line 99 to match your filename)
+3. Place it in this folder: d:\Portfolio\assets\
+4. Test the download button on your portfolio
+
+The download button will work once you place your PDF file here!
+
+TEMPORARY SOLUTION:
+-------------------
+For now, I've created this text file. You should replace it with your actual resume PDF.
+
+You can use:
+- Microsoft Word -> Save As -> PDF
+- Google Docs -> Download -> PDF
+- Canva resume templates
+- Any resume builder tool that exports to PDF

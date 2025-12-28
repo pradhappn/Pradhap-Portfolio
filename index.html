@@ -1,104 +1,450 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    </head>
-<body>
+    <meta name="description"
+        content="Pradhap P - Full Stack Web Developer Portfolio showcasing modern web applications, skills, and projects">
+    <meta name="keywords" content="Full Stack Developer, Web Developer, React, Node.js, Portfolio">
+    <meta name="author" content="Pradhap P">
 
+    <title>Pradhap P | Full Stack Web Developer</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome for Icons (Local) -->
+    <link rel="stylesheet" href="assets/fonts/fontawesome.min.css">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- HEADER & NAVIGATION -->
     <header class="header">
-        <h1 class="logo">Pradhap P</h1>
-        <nav class="nav">
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
+        <nav class="nav-container">
+            <h1 class="logo">Pradhap.dev</h1>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </nav>
     </header>
 
-    <main>
-        <section class="hero">
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+        <div class="container">
             <div class="hero-content">
-                <h2>Hi, I'm Pradhap,</h2>
-                <p>A passionate web developer focused on responsive design and excellent UI/UX.</p>
-                <a href="#projects" class="cta-button">View My Work</a>
+                <h1 class="hero-title">Hi, I'm Pradhap P</h1>
+                <p class="hero-subtitle">
+                    <span class="typing-text" id="typingText">Full Stack Web Developer</span>
+                </p>
+                <p
+                    style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 2rem; max-width: 700px; margin-left: auto; margin-right: auto;">
+                    I build exceptional digital experiences with modern technologies.
+                    Specializing in creating responsive, scalable, and user-friendly web applications.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">
+                        <i class="fas fa-code"></i> View My Work
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <i class="fas fa-envelope"></i> Get In Touch
+                    </a>
+                </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="about" class="section about-me">
-            <h2>About Me</h2>
+    <!-- ABOUT SECTION -->
+    <section class="about" id="about">
+        <div class="container">
             <div class="about-content">
-                <img src="assets/profile.jpg" alt="Your professional portrait" class="profile-img">
-                <p>I specialize in building accessible, high-performing websites using modern HTML and CSS. I'm constantly learning new technologies and currently exploring [e.g., JavaScript frameworks]. My goal is to transform complex problems into beautiful, intuitive user interfaces.</p>
+                <div class="profile-image-wrapper">
+                    <img src="assets/images/profile.jpeg" alt="Pradhap P - Full Stack Developer" class="profile-image">
+                </div>
+                <div class="about-text">
+                    <h2>About Me</h2>
+                    <p>
+                        I'm a passionate Full Stack Web Developer with expertise in building modern,
+                        scalable web applications. With a strong foundation in both frontend and backend technologies,
+                        I create seamless digital experiences that solve real-world problems.
+                    </p>
+                    <p>
+                        My approach combines clean code, intuitive design, and cutting-edge technology
+                        to deliver solutions that exceed expectations. I'm constantly learning and adapting
+                        to the ever-evolving tech landscape to stay at the forefront of web development.
+                    </p>
+                    <p>
+                        When I'm not coding, you'll find me exploring new technologies, contributing to open-source
+                        projects, or sharing knowledge with the developer community.
+                    </p>
+                    <div style="margin-top: 2rem;">
+                        <a href="assets/Pradhap_Resume.pdf" download="Pradhap_Resume.pdf" class="btn btn-primary">
+                            <i class="fas fa-download"></i> Download Resume
+                        </a>
+                    </div>
+                </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="skills" class="section skills">
-            <h2>My Skills</h2>
+    <!-- SKILLS SECTION -->
+    <section class="skills" id="skills">
+        <div class="container">
+            <h2 class="section-title">Technical Skills</h2>
+
             <div class="skills-grid">
-                <div class="skill-card"><h3>HTML5</h3><p>Semantic Markup</p></div>
-                <div class="skill-card"><h3>CSS3</h3><p>Flexbox, Grid, SASS</p></div>
-                <div class="skill-card"><h3>Responsive Design</h3><p>Mobile-First Approach</p></div>
-                <div class="skill-card"><h3>UI/UX</h3><p>Wireframing & Prototyping</p></div>
+                <!-- MERN Stack -->
+                <div class="skill-category">
+                    <h3>
+                        <i class="fas fa-server skill-icon"></i>
+                        MERN Stack Development
+                    </h3>
+                    <ul class="skill-list">
+                        <li class="skill-item">
+                            <div class="skill-name">
+                                <span>MongoDB</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="85"></div>
+                            </div>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-name">
+                                <span>Express.js</span>
+                                <span>88%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="88"></div>
+                            </div>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-name">
+                                <span>React.js</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="90"></div>
+                            </div>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-name">
+                                <span>Node.js</span>
+                                <span>88%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="88"></div>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
-        </section>
 
-        <section id="projects" class="section projects">
-            <h2>Featured Projects</h2>
+                <!-- Frontend Skills -->
+                <div class="skill-category">
+                    <h3>
+                        <i class="fas fa-palette skill-icon"></i>
+                        Frontend Development
+                    </h3>
+                    <ul class="skill-list">
+                        <li class="skill-item">
+                            <div class="skill-name">
+                                <span>HTML5</span>
+                                <span>95%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="95"></div>
+                            </div>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-name">
+                                <span>CSS3</span>
+                                <span>92%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="92"></div>
+                            </div>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-name">
+                                <span>JavaScript</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="90"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Tools & Version Control -->
+                <div class="skill-category">
+                    <h3>
+                        <i class="fas fa-tools skill-icon"></i>
+                        Tools & Design
+                    </h3>
+                    <ul class="skill-list">
+                        <li class="skill-item">
+                            <div class="skill-name">
+                                <span>Git & GitHub</span>
+                                <span>88%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="88"></div>
+                            </div>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-name">
+                                <span>Canva</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="85"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Data Science Tools -->
+                <div class="skill-category">
+                    <h3>
+                        <i class="fas fa-chart-line skill-icon"></i>
+                        Data Science Tools
+                    </h3>
+                    <ul class="skill-list">
+                        <li class="skill-item">
+                            <div class="skill-name">
+                                <span>Microsoft Excel</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="90"></div>
+                            </div>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-name">
+                                <span>R (Data Visualization)</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="80"></div>
+                            </div>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-name">
+                                <span>Tableau (Business Intelligence)</span>
+                                <span>82%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="82"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+                <button class="filter-btn" data-filter="frontend">Frontend</button>
+                <button class="filter-btn" data-filter="backend">Backend</button>
+            </div>
+
             <div class="projects-grid">
-
-                <div class="project-card">
-                    <img src="assets/project-1.jpg" alt="Screenshot of Project 1">
-                    <h3>Project Title 1</h3>
-                    <p>A responsive multi-page site built with pure CSS Grid for layout.</p>
-                    <div class="project-links">
-                        <a href="#" target="_blank" class="project-link-btn">Live Site</a>
-                        <a href="#" target="_blank" class="project-link-btn secondary">GitHub Repo</a>
+                <!-- Project 1 -->
+                <div class="project-card" data-category="fullstack">
+                    <img src="assets/images/project-1.png" alt="E-Commerce Platform" class="project-image">
+                    <div class="project-content">
+                        <h3 class="project-title">E-Commerce Platform</h3>
+                        <p class="project-description">
+                            Full-featured online shopping platform with payment integration,
+                            cart management, and admin dashboard. Built with modern technologies
+                            for optimal performance.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">Stripe</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link primary">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="https://github.com/pradhappn/E-Commerce-Platform-shophub" class="project-link secondary">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
                     </div>
                 </div>
 
-                <div class="project-card">
-                    <img src="assets/project-2.jpg" alt="Screenshot of Project 2">
-                    <h3>Project Title 2</h3>
-                    <p>Focus on mobile-first design and Flexbox implementation for components.</p>
-                    <div class="project-links">
-                        <a href="#" target="_blank" class="project-link-btn">Live Site</a>
-                        <a href="#" target="_blank" class="project-link-btn secondary">GitHub Repo</a>
+                <!-- Project 2 -->
+                <div class="project-card" data-category="fullstack">
+                    <img src="assets/images/project-2.png" alt="Task Management App" class="project-image">
+                    <div class="project-content">
+                        <h3 class="project-title">Task Management App</h3>
+                        <p class="project-description">
+                            Collaborative task management tool with real-time updates,
+                            drag-and-drop functionality, and team collaboration features.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Express</span>
+                            <span class="tech-tag">Socket.io</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link primary">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="#" class="project-link secondary">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
                     </div>
                 </div>
 
+                <!-- Project 3 -->
+                <div class="project-card" data-category="fullstack">
+                    <img src="assets/images/project-3.png" alt="Social Media Platform" class="project-image">
+                    <div class="project-content">
+                        <h3 class="project-title">Social Media Platform</h3>
+                        <p class="project-description">
+                            Modern social networking application with user profiles,
+                            post feeds, real-time notifications, and messaging system.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Next.js</span>
+                            <span class="tech-tag">GraphQL</span>
+                            <span class="tech-tag">Firebase</span>
+                            <span class="tech-tag">Redis</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link primary">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="#" class="project-link secondary">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
                 </div>
-        </section>
+            </div>
+        </div>
+    </section>
 
-        <section id="contact" class="section contact">
-            <h2>Get In Touch</h2>
-            <p>I'm available for freelance work and open to new opportunities.</p>
-            
-            <form action="mailto:pradhappns222@gmail.com" method="post" enctype="text/plain" class="contact-form">
-                
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="Name" required>
+    <!-- STATS SECTION -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number" data-target="50">0</div>
+                    <div class="stat-label">Projects Completed</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-target="1000">0</div>
+                    <div class="stat-label">GitHub Commits</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-target="15">0</div>
+                    <div class="stat-label">Technologies Mastered</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-target="3">0</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="Email" required>
+    <!-- CONTACT SECTION -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="text-center" style="color: var(--text-secondary); margin-bottom: 3rem; font-size: 1.1rem;">
+                I'm always open to new opportunities and collaborations. Let's create something amazing together!
+            </p>
 
-                <label for="message">Message:</label>
-                <textarea id="message" name="Message" rows="5" required></textarea>
+            <div class="contact-container">
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" placeholder="John Doe" required>
+                    </div>
 
-                <button type="submit" class="cta-button">Send Message</button>
-            </form>
-            </section>
-    </main>
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                    </div>
 
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" placeholder="Tell me about your project..."
+                            required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
+
+                <div class="social-links">
+                    <a href="https://github.com/pradhappn" target="_blank" class="social-link" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/pradhap-p-608312227" target="_blank" class="social-link"
+                        aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="mailto:pradhappns222@gmail.com" class="social-link" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://twitter.com/yourusername" target="_blank" class="social-link" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
     <footer class="footer">
-        <p>&copy; 2025 Pradhap. All rights reserved. | Built with HTML & CSS.</p>
-        <div class="social-links">
-            <a href="https://github.com/yourusername" target="_blank">GitHub</a>
-            <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
+        <div class="footer-content">
+            <p>&copy; 2025 Pradhap P. All rights reserved. | Built with passion and modern web technologies</p>
         </div>
     </footer>
 
+    <!-- JavaScript -->
+    <script src="script.js"></script>
 </body>
+
 </html>
