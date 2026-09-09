@@ -7,7 +7,6 @@
 const header = document.querySelector('.header');
 const menuToggle = document.getElementById('menuToggle');
 const navMenu = document.getElementById('navMenu');
-const themeToggle = document.getElementById('themeToggle');
 const navLinks = document.querySelectorAll('.nav-link');
 const filterBtns = document.querySelectorAll('.filter-btn');
 const projectCards = document.querySelectorAll('.project-card');
@@ -81,29 +80,6 @@ window.addEventListener('scroll', () => {
         }
     });
 });
-
-// ========== DARK MODE TOGGLE ==========
-if (themeToggle) {
-    // Check for saved theme preference
-    const currentTheme = localStorage.getItem('theme');
-    if (currentTheme === 'light') {
-        document.body.classList.add('light-mode');
-        themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
-    }
-    
-    themeToggle.addEventListener('click', () => {
-        document.body.classList.toggle('light-mode');
-        
-        // Update icon
-        if (document.body.classList.contains('light-mode')) {
-            themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
-            localStorage.setItem('theme', 'light');
-        } else {
-            themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
-            localStorage.setItem('theme', 'dark');
-        }
-    });
-}
 
 // ========== TYPING ANIMATION ==========
 const typingText = document.getElementById('typingText');
@@ -281,7 +257,7 @@ function createParticle() {
     particle.style.position = 'fixed';
     particle.style.width = '2px';
     particle.style.height = '2px';
-    particle.style.background = 'rgba(0, 212, 255, 0.5)';
+    particle.style.background = 'rgba(245, 158, 11, 0.5)';
     particle.style.borderRadius = '50%';
     particle.style.pointerEvents = 'none';
     particle.style.zIndex = '1';
@@ -327,6 +303,12 @@ window.addEventListener('load', () => {
     if (heroContent) {
         heroContent.style.opacity = '1';
     }
+
+    const revealElements = document.querySelectorAll('.reveal, .skill-category, .project-card, .stat-card, .contact-form, .about-content');
+    revealElements.forEach((element, index) => {
+        element.classList.add('reveal');
+        setTimeout(() => element.classList.add('visible'), 80 * index + 120);
+    });
     
     // Initialize skill bars to 0 width
     document.querySelectorAll('.skill-progress').forEach(bar => {
@@ -342,7 +324,7 @@ if (window.innerWidth > 1024) {
         glow.style.width = '300px';
         glow.style.height = '300px';
         glow.style.borderRadius = '50%';
-        glow.style.background = 'radial-gradient(circle, rgba(0,212,255,0.05) 0%, transparent 70%)';
+        glow.style.background = 'radial-gradient(circle, rgba(245,158,11,0.05) 0%, transparent 70%)';
         glow.style.pointerEvents = 'none';
         glow.style.left = (e.clientX - 150) + 'px';
         glow.style.top = (e.clientY - 150) + 'px';
@@ -359,6 +341,6 @@ if (window.innerWidth > 1024) {
 }
 
 // ========== CONSOLE EASTER EGG ==========
-console.log('%c👋 Hi there, Developer!', 'color: #00d4ff; font-size: 20px; font-weight: bold;');
-console.log('%cInterested in the code? Check it out on GitHub!', 'color: #a855f7; font-size: 14px;');
-console.log('%cLet\'s build something amazing together! 🚀', 'color: #fbbf24; font-size: 14px;');
+console.log('%c👋 Hi there, Developer!', 'color: #f59e0b; font-size: 20px; font-weight: bold;');
+console.log('%cInterested in the code? Check it out on GitHub!', 'color: #2dd4bf; font-size: 14px;');
+console.log('%cLet\'s build something amazing together! 🚀', 'color: #fde68a; font-size: 14px;');
