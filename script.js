@@ -157,16 +157,6 @@ if (filterBtns.length > 0) {
     });
 }
 
-// ========== ANIMATED SKILL BARS ==========
-function animateSkillBars() {
-    const skillBars = document.querySelectorAll('.skill-progress');
-    
-    skillBars.forEach(bar => {
-        const progress = bar.getAttribute('data-progress');
-        bar.style.width = progress + '%';
-    });
-}
-
 // ========== ANIMATED COUNTERS ==========
 function animateCounter(element) {
     const target = parseInt(element.getAttribute('data-target'));
@@ -198,11 +188,6 @@ const observer = new IntersectionObserver((entries) => {
         if (entry.isIntersecting) {
             // Add fade-in animation
             entry.target.classList.add('fade-in-up');
-            
-            // Animate skill bars
-            if (entry.target.classList.contains('skills')) {
-                animateSkillBars();
-            }
             
             // Animate counters
             if (entry.target.classList.contains('stats')) {
@@ -257,7 +242,7 @@ function createParticle() {
     particle.style.position = 'fixed';
     particle.style.width = '2px';
     particle.style.height = '2px';
-    particle.style.background = 'rgba(245, 158, 11, 0.5)';
+    particle.style.background = 'rgba(45, 212, 191, 0.5)';
     particle.style.borderRadius = '50%';
     particle.style.pointerEvents = 'none';
     particle.style.zIndex = '1';
@@ -309,11 +294,6 @@ window.addEventListener('load', () => {
         element.classList.add('reveal');
         setTimeout(() => element.classList.add('visible'), 80 * index + 120);
     });
-    
-    // Initialize skill bars to 0 width
-    document.querySelectorAll('.skill-progress').forEach(bar => {
-        bar.style.width = '0%';
-    });
 });
 
 // ========== CURSOR GLOW EFFECT (Desktop only) ==========
@@ -324,7 +304,7 @@ if (window.innerWidth > 1024) {
         glow.style.width = '300px';
         glow.style.height = '300px';
         glow.style.borderRadius = '50%';
-        glow.style.background = 'radial-gradient(circle, rgba(245,158,11,0.05) 0%, transparent 70%)';
+        glow.style.background = 'radial-gradient(circle, rgba(45,212,191,0.05) 0%, transparent 70%)';
         glow.style.pointerEvents = 'none';
         glow.style.left = (e.clientX - 150) + 'px';
         glow.style.top = (e.clientY - 150) + 'px';
